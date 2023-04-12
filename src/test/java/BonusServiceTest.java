@@ -5,7 +5,7 @@ public class BonusServiceTest {
 
     @Test
     void shouldCalculateForRegisteredAndUnderLimit() {
-        BonusServiceTest service = new BonusServiceTest();
+        BonusService service = new BonusService();
 
         // подготавливаем данные:
         long amount = 1000;
@@ -20,7 +20,7 @@ public class BonusServiceTest {
 
     @Test
     void shouldCalculateForRegisteredAndOverLimit() {
-        BonusServiceTest service = new BonusServiceTest();
+        BonusService service = new BonusService();
 
         // подготавливаем данные:
         long amount = 1_000_000;
@@ -34,8 +34,8 @@ public class BonusServiceTest {
         Assertions.assertEquals(expected, actual);
     }
     @Test
-    void shouldCalculateForRegisteredAndUnderLimit() {
-        BonusServiceTest service = new BonusServiceTest();
+    void shouldCalculateForUnRegisteredAndUnderLimit() {
+        BonusService service = new BonusService();
 
         // подготавливаем данные:
         long amount = 1000;
@@ -48,8 +48,8 @@ public class BonusServiceTest {
         Assertions.assertEquals(expected, actual);
     }
     @Test
-    void shouldCalculateForRegisteredAndOverLimit() {
-        BonusServiceTest service = new BonusServiceTest();
+    void shouldCalculateForUnRegisteredAndOverLimit() {
+        BonusService service = new BonusService();
 
         // подготавливаем данные:
         long amount = 1_000_000;
